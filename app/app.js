@@ -1,0 +1,1 @@
+require('semantic-ui-css/semantic.js')

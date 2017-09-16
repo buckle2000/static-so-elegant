@@ -1,0 +1,19 @@
+{
+  "name": "so-elegant-static-template",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "brunch w --server"
+  },
+  "dependencies": {
+    "serve": "^6.1.0"
+  },
+  "devDependencies": {
+    "auto-reload-brunch": "^2",
+    "brunch": "^2",
+    "jquery": "^3.2.1",
+    "pugjs-brunch": "^2.10.0",
+    "semantic-ui-css": "^2.2.12",
+    "stylus-brunch": "^2.10.0",
+    "uglify-js-brunch": "^2"
+  }
+}
