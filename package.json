@@ -1,5 +1,5 @@
 {
-  "name": "so-elegant-static-template",
+  "name": "static-so-elegant",
   "scripts": {
     "start": "node server.js",
     "dev": "brunch w --server"
