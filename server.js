@@ -1,6 +1,15 @@
 const path = require('path')
 const serve = require('serve')
 
-const server = serve(path.join(__dirname, 'public'), {
-  port: process.env.PORT || 3000
-})
+function start_server(port) {
+  const server = serve(path.join(__dirname, 'public'), {
+    port: process.env.PORT || port,
+    extensions: ['html', 'htm']
+  })
+}
+
+if (process.mainModule === module) {
+  start_server(3000)
+}
+
+module.exports = start_server

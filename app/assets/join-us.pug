@@ -1,0 +1,85 @@
+extends /default.pug
+
+block body
+  .ui.vertical.segment
+    h1.ui.center.aligned.icon.header
+      i.configure.icon
+      | 革新生产力
+      .sub.header
+        | 加入团队第一步 
+        br 
+        | 请选择安装下列程序/注册下列网站
+
+  mixin a_item(name, link, description)
+    .item
+      .content
+        a.header(href=link)=name
+        .description=description
+        
+  .ui.vertical.segment
+    h2.ui.center.aligned.icon.header
+      i.map.signs.icon
+      | 翻墙软件
+      .sub.header 通往知识的道路
+    .ui.center.aligned.container
+      i.down.chevron.icon
+    .ui.center.aligned.text.container
+      .ui.list
+      +a_item("Lantern", "https://github.com/getlantern/lantern/releases/tag/latest", "蓝灯是给用户提供快速，安全和方便的访问互联网的翻墙工具")
+      small
+        +a_item("Lantern Github", "https://github.com/getlantern/lantern", "蓝灯的源代码")
+      +a_item("Hosts", "https://github.com/racaljk/hosts/blob/master/README.md", "能翻墙的工具")
+      small
+        +a_item("Google hosts文件", "https://coding.net/u/scaffrey/p/hosts/git")
+        +a_item("Hosts 更换工具", "https://github.com/racaljk/hosts/blob/master/tools")
+      +a_item("VPN.AC", "https://vpnac.com/", "收费但可靠的安全工具")
+      +a_item("XX-Net", "https://github.com/XX-net/XX-Net/wiki/%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3", "科学上网的 WEB 代理")
+
+  .ui.vertical.segment
+    h2.ui.center.aligned.icon.header
+      i.Code.icon
+      | 开发软件
+      .sub.header 创造知识的工具
+    .ui.center.aligned.container
+      i.down.chevron.icon
+    .ui.center.aligned.text.container
+      .ui.list
+      +a_item("Jetbrains 全家桶", "https://www.jetbrains.com/", "优雅的IDE")
+      +a_item("Sublime Text 3", "https://www.sublimetext.com/", "A sophisticated text editor for code, markup and prose")
+      +a_item("Git", "https://git-scm.com/", "代码版本控制工具")
+      +a_item("Visual Studio Code", "https://code.visualstudio.com/", "代码编辑工具")
+
+  .ui.vertical.segment
+    h2.ui.center.aligned.icon.header
+      i.handshake.icon
+      | 协作平台
+      .sub.header 分享知识的媒介
+    .ui.center.aligned.container
+      i.down.chevron.icon
+    .ui.center.aligned.text.container
+      .ui.list
+      +a_item("Gitlab", "https://gitlab.com", "私有云仓库")
+      +a_item("Github", "https://github.com", "共产云仓库")
+      +a_item("Telegram", "https://telegram.org/", "自由的聊天软件")
+      small  
+        +a_item("Telegram Android", "http://ge.tt/5rqmBYm2/", "安卓下载")
+
+  .ui.vertical.segment.center.aligned
+    h2.ui.icon.header  
+      i.horizontal.ellipsis.icon
+      | 更多软件
+    p: big    
+      a(href="http://ge.tt/5EqKDYm2") 点击下载引索
+
+  .ui.center.aligned.vertical.segment
+    h2.ui.header
+      p
+        i.sign.in.outline.big.icon
+        br
+        | 加入团队
+    div: a(href="mailto:contact@sun-seminary.com") contact@sun-seminary.com
+    div: a(href="https://t.me/joinchat/EbfdZgzBhmZ_SsXL3ghLXw") Telegram Group（需要翻墙）
+
+  .ui.right.aligned.vertical.segment
+    .ui.text.container
+      small 制作用时<30分钟

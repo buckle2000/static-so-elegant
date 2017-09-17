@@ -4,14 +4,14 @@ const PRODUCTION = (process.env.NODE_ENV === "production")
 exports.files = {
   javascripts: {
     joinTo: {
-      'vendor.js': [/^(?!app)/],
+      'vendor.js': /^node_modules/,
       'app.js': /^app\//
     },
   },
   stylesheets: {
     joinTo: {
-      'app.css': /^app/,
-      'vendor.css': /^node_modules/
+      'vendor.css': /^node_modules/,
+      'app.css': /^app/
     }
   }
 };
@@ -54,5 +54,8 @@ exports.npm.globals = {
 }
 
 exports.modules = {
-  nameCleaner: path => path.replace(/^app\//, '')
+  nameCleaner: path => path.replace(/^app\//, ''),
+  autoRequire: {
+    'app.js': ['app']
+  }
 }

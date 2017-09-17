@@ -1,16 +1,19 @@
 {
   "name": "static-so-elegant",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "scripts": {
     "start": "node server.js",
-    "dev": "brunch w --server"
+    "dev": "brunch w --server",
+    "postinstall": "node postinstall.js"
   },
   "dependencies": {
+    "fs-extra": "^4.0.2",
     "serve": "^6.1.0"
   },
   "devDependencies": {
     "auto-reload-brunch": "^2",
     "brunch": "^2",
+    "holderjs": "^2.9.4",
     "jquery": "^3.2.1",
     "pugjs-brunch": "^2.10.0",
     "semantic-ui-css": "^2.2.12",
