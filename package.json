@@ -1,6 +1,6 @@
 {
   "name": "static-so-elegant",
-  "version": "0.0.5",
+  "version": "0.1.0",
   "scripts": {
     "start": "node server.js",
     "dev": "brunch w --server",
