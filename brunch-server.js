@@ -1,11 +1,5 @@
-const server = require('./server');
+const run_server = require('./server')
 
 module.exports = (config, callback) => {
-  server(config.port);
-  callback();
-  return {
-    close() {
-      server.stop()
-    }
-  };
+  return run_server(config.port, callback)
 };
