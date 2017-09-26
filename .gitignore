@@ -1,4 +1,4 @@
 node_modules/
-.dpd/
-public/
-misc/
+/.dpd/
+/public/
+npm-debug.log

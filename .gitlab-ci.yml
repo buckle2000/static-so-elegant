@@ -1,0 +1,25 @@
+image: node:8
+
+cache:
+  paths:
+    - node_modules/
+
+job_build:
+  stage: build
+  only: [master]
+  script:
+    - npm i brunch -g
+    - npm i
+  artifacts:
+    paths:
+      - public/
+
+pages:
+  only: [master]
+  variables:
+    NODE_ENV: production
+  script:
+    - npm run build
+  artifacts:
+    paths:
+      - public/

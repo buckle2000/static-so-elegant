@@ -1,0 +1,9 @@
+-
+  function abs(path) {
+    if (!path.startsWith('/'))
+      throw Exception(`Invalid path: ${path}`);
+    if (path !== '/' && !path.includes('.'))
+      path += '.html'
+    // return '//example.com' + path
+    return path;
+  }

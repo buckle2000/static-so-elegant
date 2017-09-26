@@ -1,16 +1,16 @@
 {
   "name": "static-so-elegant",
-  "version": "0.1.0",
+  "version": "0.0.5",
   "scripts": {
     "start": "node server.js",
     "dev": "brunch w --server",
-    "prestart": "brunch build -p",
-    "postinstall": "node postinstall.js"
+    "build": "brunch b -p"
   },
   "dependencies": {
-    "http-server": "^0.10.0"
+    "ecstatic": "^3.0.0"
   },
   "devDependencies": {
+    "basscss": "^8.0.2",
     "fs-extra": "^4.0.2",
     "auto-reload-brunch": "^2",
     "brunch": "^2",

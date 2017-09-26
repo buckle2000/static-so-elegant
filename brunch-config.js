@@ -5,7 +5,7 @@ exports.files = {
   javascripts: {
     joinTo: {
       'vendor.js': /^node_modules/,
-      'app.js': /^app\//
+      'app.js': /^app/
     },
   },
   stylesheets: {
@@ -37,13 +37,15 @@ exports.plugins = {
 if (process.env.NODE_ENV === 'production') {
   exports.npm = {
     styles: {
-      'semantic-ui-css': ['semantic.min.css']
+      'semantic-ui-css': ['semantic.min.css'],
+      'basscss': ['css/basscss.min.css']
     },
   }
 } else {
   exports.npm = {
     styles: {
-      'semantic-ui-css': ['semantic.css']
+      'semantic-ui-css': ['semantic.css'],
+      'basscss': ['css/basscss.css']
     },
   }
 }
@@ -58,4 +60,8 @@ exports.modules = {
   autoRequire: {
     'app.js': ['app']
   }
+}
+
+exports.conventions = {
+  ignored: [/^app\/layouts/, /\.bak$/]
 }
