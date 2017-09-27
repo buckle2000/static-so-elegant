@@ -6,6 +6,6 @@ RUN ["npm", "install", "brunch", "-g"]
 RUN ["npm", "install"]
 ENV NODE_ENV production
 ENV PORT 80
-# prestart = build
+RUN ["npm", "run", "build"]
 CMD ["npm", "start"]
 EXPOSE 80
