@@ -1,4 +1,4 @@
-# So Elegant - a Docker-ready Frontend Framework
+# So Elegant - a Docker-ready Brunch Skeleton
 
 ## Technology Included
 
