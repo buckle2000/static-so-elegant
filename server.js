@@ -1,7 +1,7 @@
 const os = require('os')
 const path = require('path')
 const http = require('http');
-const ecstatic = require('../lib/ecstatic');
+const ecstatic = require('ecstatic');
 
 const ifaces = os.networkInterfaces()
 
@@ -20,7 +20,8 @@ function print_information(port) {
 
 function run_server(port, callback) {
   print_information(port)
-  return http.createServer(ecstatic({
+  callback()
+  http.createServer(ecstatic({
     root: __dirname,
     showDir: true,
     autoIndex: true,
