@@ -22,7 +22,7 @@ function run_server(port, callback) {
   print_information(port)
   callback()
   http.createServer(ecstatic({
-    root: __dirname,
+    root: path.join(__dirname, 'public'),
     showDir: true,
     autoIndex: true,
   })).listen(port)
